@@ -35,8 +35,20 @@ Publicação oficial que inicia, movimenta ou encerra um processo ou uma medida,
 _Avoid_: publicação, norma, documento
 
 **Prazo**:
-Data-limite associada a um processo, seja prevista no ato oficial, seja fixada internamente pela equipe.
-_Avoid_: deadline, vencimento
+Data-limite para um ato dentro de um processo. Por regra decorre do regulamento do tipo de processo (prazo regulamentar) e pode ser substituída por prazo impróprio ou convencional quando houver; a equipe também pode fixar prazos internos.
+_Avoid_: deadline, vencimento, vigência
+
+**Prazo regulamentar**:
+Prazo previsto na norma que rege o tipo de processo, calculado a partir de um evento do próprio processo.
+_Avoid_: prazo legal (quando a fonte é infralegal), prazo padrão
+
+**Vigência**:
+Período durante o qual uma medida produz efeitos, do início ao término ou à renovação. Distinta dos prazos do processo que a originou.
+_Avoid_: prazo da medida, validade
+
+**Tipo de processo**:
+Procedimento previsto em regulamento para um instituto de defesa comercial ou de política tarifária, com fases e prazos regulamentares próprios, como a revisão de final de período de um direito antidumping ou o pleito de inclusão na LETEC.
+_Avoid_: modalidade, categoria de processo
 
 ## Atuação da Eletros
 
