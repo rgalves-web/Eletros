@@ -50,6 +50,22 @@ _Avoid_: prazo da medida, validade
 Procedimento previsto em regulamento para um instituto de defesa comercial ou de política tarifária, com fases e prazos regulamentares próprios, como a revisão de final de período de um direito antidumping ou o pleito de inclusão na LETEC.
 _Avoid_: modalidade, categoria de processo
 
+**Incidente**:
+Procedimento com prazos próprios que corre dentro de um processo principal, como o compromisso de preços, o direito provisório, a habilitação de indústria fragmentada ou o recurso.
+_Avoid_: subprocesso, procedimento acessório
+
+**Evento da medida**:
+Fato que altera a vigência ou as condições de uma medida existente, como prorrogação, suspensão por interesse público, reaplicação, redeterminação ou revogação.
+_Avoid_: nova medida, alteração (como termo genérico)
+
+**Documento de acompanhamento**:
+Publicação oficial fora do DOU que registra a tramitação de um processo, como ata do CAT ou do Gecex, planilha de acompanhamento de pleitos ou nota técnica.
+_Avoid_: sinal antecipado, anexo, documento auxiliar
+
+**Histórico do processo**:
+Registro cronológico de todos os atos, documentos de acompanhamento e eventos da participação de um processo, que permite reconstituir a sua tramitação.
+_Avoid_: linha do tempo, log
+
 ## Atuação da Eletros
 
 **Participação**:
