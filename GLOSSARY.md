@@ -20,6 +20,14 @@ _Avoid_: produto final, eletro
 Vínculo identificado entre um ato e um item de interesse, seja por NCM, por palavra-chave ou por termo semanticamente próximo.
 _Avoid_: match, hit, ocorrência
 
+**Ex**:
+Recorte de uma NCM por descrição específica de mercadoria, com alíquota diferenciada (menor ou maior) da prevista para a NCM, como um ex-tarifário de BK/BIT ou um Ex de LETEC. Um item de interesse pode ser a NCM raiz ou a NCM com um Ex.
+_Avoid_: ex-tarifário (como termo genérico), subitem
+
+**Destaque**:
+Código que identifica um Ex no Siscomex para fins de tratamento administrativo e licenciamento de importação, condição para usufruir da alíquota diferenciada.
+_Avoid_: Ex (quando se fala do código operacional)
+
 ## Processos e medidas
 
 **Processo**:
