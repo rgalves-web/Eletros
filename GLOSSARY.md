@@ -97,8 +97,24 @@ Peça protocolada pela Eletros em um processo, com seus documentos.
 _Avoid_: petição, submissão, contribuição
 
 **Cérebro**:
-Base de conhecimento viva, em documentos editáveis, que o agente consulta e atualiza antes de propor: páginas por item de interesse, tipo de processo, processo e medida, mais o registro das decisões da equipe com motivo.
+Base de conhecimento viva, em páginas Markdown versionadas, que o agente consulta e atualiza antes de propor e que a equipe edita: páginas por item de interesse, tipo de processo, processo, medida, fonte monitorada, categoria e síntese, mais o registro das decisões da equipe com motivo. É a fonte única da verdade do sistema; o banco relacional é índice derivado dele.
 _Avoid_: base de conhecimento (como termo genérico), memória, wiki
+
+**Esquema do cérebro**:
+Regras de cada tipo de página do cérebro, com os campos obrigatórios e os seus tipos, que o agente lê antes de escrever e que valida toda escrita.
+_Avoid_: schema (em prosa), modelo de dados, template
+
+**Página de síntese**:
+Página do cérebro derivada de outras, mantida só pelo agente e regenerada livremente, que cruza itens, processos e medidas segundo um recorte útil à equipe.
+_Avoid_: relatório, visão, dashboard (quando se fala da página)
+
+**Fonte monitorada**:
+Origem pública que o coletor lê em cadência fixa, como o INLABS, as páginas da Camex ou o painel de ex-tarifários, com página própria no cérebro que registra órgão, formato, cadência e quebras.
+_Avoid_: fonte (sem qualificativo), feed, canal
+
+**Categoria**:
+Classe fechada à qual todo item de interesse pertence, com vocabulário mantido numa página do cérebro, distinta do segmento (linha branca, linha marrom, portáteis, ar-condicionado, TIC) dos produtos acabados.
+_Avoid_: grupo, família, classe
 
 **Proposta**:
 Cadastro ou atualização de processo, medida ou correspondência sugerida pelo agente e ainda não confirmada pela equipe.
