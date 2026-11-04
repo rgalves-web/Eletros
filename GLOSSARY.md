@@ -17,8 +17,16 @@ Item de interesse que é ele próprio um bem final fabricado ou comercializado p
 _Avoid_: produto final, eletro
 
 **Correspondência**:
-Vínculo identificado entre um ato e um item de interesse, seja por NCM, por palavra-chave ou por termo semanticamente próximo.
+Vínculo identificado pelo agente entre um ato e um item de interesse ou um processo já cadastrado, seja por NCM, por palavra-chave, por chave do processo ou por termo semanticamente próximo. Toda correspondência traz nível de confiança, trecho literal do ato e justificativa.
 _Avoid_: match, hit, ocorrência
+
+**Nível de confiança**:
+Juízo do agente sobre uma correspondência, entre alta, média e baixa, que a equipe pode reclassificar ao confirmar. Determina se a proposta gera alerta imediato ou espera o resumo diário.
+_Avoid_: escore, score, probabilidade
+
+**Ex pertinente**:
+Ex criado ou alterado numa NCM de interesse cuja descrição alcança um produto fabricado ou um insumo comprado pelas associadas, segundo o agente. Distingue-se do Ex na mesma NCM, que só compartilha a classificação.
+_Avoid_: Ex relevante, Ex da Eletros
 
 **Ex**:
 Recorte de uma NCM por descrição específica de mercadoria, com alíquota diferenciada (menor ou maior) da prevista para a NCM, como um ex-tarifário de BK/BIT ou um Ex de LETEC. Um item de interesse pode ser a NCM raiz ou a NCM com um Ex.
@@ -87,6 +95,10 @@ _Avoid_: estratégia, interesse
 **Manifestação**:
 Peça protocolada pela Eletros em um processo, com seus documentos.
 _Avoid_: petição, submissão, contribuição
+
+**Cérebro**:
+Base de conhecimento viva, em documentos editáveis, que o agente consulta e atualiza antes de propor: páginas por item de interesse, tipo de processo, processo e medida, mais o registro das decisões da equipe com motivo.
+_Avoid_: base de conhecimento (como termo genérico), memória, wiki
 
 **Proposta**:
 Cadastro ou atualização de processo, medida ou correspondência sugerida pelo agente e ainda não confirmada pela equipe.
