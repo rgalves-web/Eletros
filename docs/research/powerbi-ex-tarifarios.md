@@ -106,3 +106,16 @@ Outra via é liberar `app.powerbi.com` e `*.analysis.windows.net` (e `www.gov.br
 - Comunidade Microsoft (Fabric Community, citando a documentação "Publish to web"): [atualização e cache](https://community.fabric.microsoft.com/t5/Service/How-often-does-a-report-refresh-its-data-when-using-the-publish/td-p/2493049); [ausência de exportação de dados](https://community.fabric.microsoft.com/t5/Service/Publish-to-Web-Export-to-Pdf-button-Download-Data-link/td-p/3422078). A página oficial do Microsoft Learn não pôde ser aberta deste ambiente.
 - Secundárias: [ABIMO](https://abimo.org.br/servicos/consulta-publica-mdic/consulta-publica-ex-tarifario/); [Buscador Ex-Tarifário, fontes](https://buscadorextarifario.com.br/fontes); [Canal Solar, 06/05/2026](https://canalsolar.com.br/mdic-consulta-producao-nacionak-ex-tarifarios-inversores/); [Autodata, 22/04/2025](https://www.autodata.com.br/noticias/2025/04/22/governo-buscara-reduzir-pela-metade-os-atuais-9-mil-ex-tarifarios/87048/).
 - Teste de rede deste ambiente (04/11/2026): `curl` a `app.powerbi.com`, `wabi-brazil-south-b-primary-redirect.analysis.windows.net` e `www.gov.br` → `CONNECT tunnel failed, response 403`; Playwright → `net::ERR_TUNNEL_CONNECTION_FAILED`.
+
+## Teste real (04/11/2026)
+
+Com os domínios `app.powerbi.com`, `*.analysis.windows.net` e `www.gov.br` liberados no ambiente, o script `spike/pbi_ex_tarifarios.py all` rodou de ponta a ponta: o Playwright abriu o painel e capturou as consultas dos visuais, e o reenvio por HTTP paginou a tabela de consultas públicas em 96 páginas de cerca de 500 linhas.
+
+- **Volume:** 47.781 linhas, de 06/01/2021 a 04/11/2026; 520 linhas com status "Em Andamento" (consultas 41/2026 a 49/2026 no dia do teste).
+- **Campos (tabela "Consultas Públicas")**: Número/Ano da consulta, Data de Publicação, Prazo para Contestação, Tipo de Pleito, BK/BIT, NCM, Código SDIC, Descrição da Mercadoria, Status (Em Andamento/Encerrada) e link para Catálogos (pasta no Google Drive).
+- **Prazo de contestação** vem pronto no painel (30 dias corridos após a publicação nas consultas de 2026), o que dispensa cálculo para esse tipo.
+- **Datas** chegam como epoch em milissegundos (UTC).
+- **Sujeira de dados a normalizar:** "NOVO" e "NOVOS" como tipos distintos; "BK" com espaço não separável; linhas "Do Consolidado" sem NCM própria; Número/Ano "RN" (renovação) e "RV" (revogação) em vez de ano; 1.153 pares (consulta, código SDIC) repetidos.
+- **Teste de correspondência ingênua:** cruzando as 520 linhas abertas com as 203 NCMs de insumos do censo por prefixo, saíram 34 coincidências, quase todas falsos positivos (bombas agrícolas, coletores de pó industriais em 8413 e 8421). Confirma que a correspondência por NCM sozinha não basta e que a camada semântica é necessária.
+
+Conclusão: a extração automatizada funciona sem login e sem navegador na rotina diária, depois de uma captura inicial com navegador. O coletor deve detectar quebra (consulta rejeitada, mudança de colunas, queda brusca de linhas) e repetir a captura com navegador quando isso ocorrer.
